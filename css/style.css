@@ -1,0 +1,138 @@
+*{
+    box-sizing:border-box;
+}
+body {
+    width: 1024px;
+    height:640px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display:grid;
+    grid-template-areas: 
+    "Header"
+    "main"
+    "aside"
+    "footer";
+
+    background-color:greenyellow;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header{
+    grid-area: header;
+    grid-row-start: 1;
+    grid-row-end: 1 ;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: grid;
+    grid-template-areas:"logo link rightnav" ;
+    grid-template-columns: 110px Auto 105px;
+    grid-template-rows: 60px;
+    align-items: center;
+    background-color: blue;
+    height:60px;
+}
+header>h1{
+    grid-area:logo;
+    display: inline-flex;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+}
+
+nav>ul{
+    grid-area: link;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    align-items: left;
+}
+nav>ul>li{
+    display: inline-block;
+    text-decoration:none;
+    align-items: left;
+}
+nav>ul>li>a{
+    display:inline-flex;
+    height:50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    text-decoration:none;
+    background-color: coral; 
+}
+nav>ul>li>a:hover {
+    text-decoration-color: coral;
+    background-color: green; 
+
+}
+
+header>a {
+    grid-area:rightnav;
+    display:inline-flex;
+    height:50px;
+    width: 100px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration:none;
+    background-color: coral; 
+}
+header>a>a:hover {
+    text-decoration-color: coral;
+    background-color: green; 
+
+}
+
+
+main{
+    grid-area:main;
+    grid-row-start: 2;
+    grid-row-end: 2 ;
+    grid-column-start: 1;
+    grid-column-start: 1;
+
+    background-color: coral;
+}
+
+main>h1{
+
+}
+
+main>p{
+
+}
+
+article{
+    grid-area: article;
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row-end: 1;
+    display:inline-block;
+    vertical-align:top;
+    width:45%;
+ }
+ article>h2{
+ }
+ article>p{
+}
+
+aside{
+    grid-area:aside;
+    grid-row-start: 2;
+    grid-column-start: 2;
+    grid-row-end: 3;
+    
+    background-color: chartreuse;
+}
+
+footer{
+    grid-area: footer;
+    grid-row-start: 3;
+    grid-column-end: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:40px;
+    background-color: aqua;
+}
