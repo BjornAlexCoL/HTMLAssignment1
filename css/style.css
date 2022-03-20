@@ -3,18 +3,17 @@
 }
 body {
     width: 1024px;
-    height:640px;
     margin-left: auto;
     margin-right: auto;
 
     display:grid;
     grid-template-areas: 
     "Header"
-    "main"
-    "aside"
+    "main" "login"
     "footer";
 
-    background-color:greenyellow;
+    background-color:black;
+    color:greenyellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 header{
@@ -28,17 +27,19 @@ header{
     grid-template-columns: 110px Auto 105px;
     grid-template-rows: 60px;
     align-items: center;
-    background-color: blue;
+    background-color:yellowgreen;
     height:60px;
 }
 header>h1{
     grid-area:logo;
-    display: inline-flex;
-    width: 100px;
+    display: grid;
+    text-transform:uppercase;
+    align-items: center;
+    width: 150px;
     height: 50px;
     text-align: center;
-    align-items: center;
-    justify-items: center;
+    background-color:yellowgreen;
+    color: green;
 }
 
 nav>ul{
@@ -56,14 +57,16 @@ nav>ul>li>a{
     display:inline-flex;
     height:50px;
     width: 100px;
+    font-weight: bold;
     align-items: center;
     justify-content: center;
     text-decoration:none;
-    background-color: coral; 
+    background-color: yellowgreen; 
+    color:green;
 }
 nav>ul>li>a:hover {
-    text-decoration-color: coral;
-    background-color: green; 
+    color:yellowgreen;
+    background-color:green; 
 
 }
 
@@ -72,50 +75,66 @@ header>a {
     display:inline-flex;
     height:50px;
     width: 100px;
+    font-weight: bold;
     align-items: center;
     justify-content: center;
     text-align: center;
     text-decoration:none;
-    background-color: coral; 
+    background-color: yellowgreen; 
+    color:green
 }
-header>a>a:hover {
-    text-decoration-color: coral;
-    background-color: green; 
-
+header>a:hover {
+    color:yellowgreen;
+    background-color:green; 
 }
 
 
 main{
     grid-area:main;
+    text-align: justify;
+    grid-row-start: 2;
+    grid-row-end: 3 ;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    height: auto;
+
+    background-color: black;
+    
+}
+main>h1{
+    grid-area: main;
     grid-row-start: 2;
     grid-row-end: 2 ;
     grid-column-start: 1;
-    grid-column-start: 1;
-
-    background-color: coral;
-}
-
-main>h1{
+    grid-column-end: 2;
+    margin-left: 3%;
+    margin-right: 3%;
 
 }
-
 main>p{
-
+    margin-left: 3%;
+    margin-right: 3%;
+    
 }
 
 article{
-    grid-area: article;
-    grid-row-start: 1;
-    grid-column-start: 2;
-    grid-row-end: 1;
+    text-align: justify;
     display:inline-block;
+    grid-column-end: 2;
+    margin-left: 3%;
+    width: 45%;
     vertical-align:top;
-    width:45%;
- }
- article>h2{
- }
- article>p{
+    border-block-end-color: brown;
 }
+
+article>img{
+    display:inline-block;
+    margin-left: 33%;
+    width: 34%;
+    
+}
+
+
 
 aside{
     grid-area:aside;
@@ -123,7 +142,7 @@ aside{
     grid-column-start: 2;
     grid-row-end: 3;
     
-    background-color: chartreuse;
+    background-color:grey;
 }
 
 footer{
@@ -134,5 +153,40 @@ footer{
     align-items: center;
     justify-content: center;
     height:40px;
-    background-color: aqua;
+    background-color: yellowgreen;
+    color:black;
+}
+main>h2{
+    margin-left:33%;
+    width: 1024px;
+    text-transform: uppercase;
+    
+}
+form{
+    display:block;
+    background-color: brown;
+    text-align: center;
+    border-radius: 10px;
+    margin-left:33%;
+    margin-right:33%;
+    margin-bottom: 10%;
+    background-color:yellowgreen;
+    align-items: center;
+    padding-top: 2%;
+
+}
+form>input{
+display: inline-block;
+align-items: center;
+margin-bottom: 5%;
+}
+
+
+#username{
+
+        width: 90%;
+}
+#password{
+    width: 90%;
+
 }
