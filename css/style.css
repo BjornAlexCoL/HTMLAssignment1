@@ -2,13 +2,11 @@ body {
     width: 1024px;
     margin-left: auto;
     margin-right: auto;
-
     display:grid;
     grid-template-areas: 
     "Header"
     "main" "login"
     "footer";
-
     background-color:black;
     color:greenyellow;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -132,14 +130,13 @@ article>img{
     display:inline-block;
     margin-left: 33%;
     width: 34%;    
-}
-article>p:nth-child(2){
-    color:aquamarine;
-}
-main>article:nth-child(1){
-    color:yellowgreen;
+
 }
 
+article:nth-child(3)>p:nth-child(3){
+    color:aqua;
+    font-weight: bold;
+}
 
 aside{
     grid-area:aside;
@@ -154,19 +151,24 @@ aside>ul{
     text-transform: capitalize;
     list-style: none;
 }
+
 aside>ol{
     text-transform: capitalize;
     list-style-type: none;
 }
+
 ul>li:nth-of-type(odd){
-    color: cyan;
+    color: seagreen;
 }
+
 ul>li:nth-of-type(even){
     color: magenta;
 }
+
 ul>li>ol>li:nth-child(1){
     color:pink;
 }
+
 ul>li>ol>li:nth-child(2){
     color:coral;
 }
@@ -174,8 +176,6 @@ ul>li>ol>li:nth-child(2){
 ul>li>ol>li:nth-child(3){
     color:mediumseagreen;
 }
-
-
 
 footer{
     grid-area: footer;
@@ -210,18 +210,18 @@ form{
 }
 
 form>input{
-display: inline-block;
-align-items: center;
-margin-bottom: 5%;
+    display: inline-block;
+    align-items: center;
+    margin-bottom: 5%;
 }
 
 input[type=reset]{ 
-   background-color: yellowgreen;
-   color:red;
-   text-transform: capitalize;
-   font-weight: bold;
-   border-radius: 5px;
-   border: 0;
+    background-color: yellowgreen;
+    color:red;
+    text-transform: capitalize;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 0;
 }
 
 input[type=reset]:hover{ 
@@ -241,11 +241,10 @@ input[type=submit]{
 input[type=submit]:hover{ 
     color:yellow;
     background-color: green;  
- }
+}
  
 #username{
-
-        width: 90%;
+    width: 90%;
 }
 
 #password{
