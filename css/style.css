@@ -118,7 +118,7 @@ main>p{
     margin-right: 3%;
     
 }
-
+            
 article{
     text-align: justify;
     display:inline-block;
@@ -126,24 +126,56 @@ article{
     margin-left: 3%;
     width: 45%;
     vertical-align:top;
-    border-block-end-color: brown;
 }
 
 article>img{
     display:inline-block;
     margin-left: 33%;
-    width: 34%;
-    
+    width: 34%;    
 }
+article>p:nth-child(2){
+    color:aquamarine;
+}
+main>article:nth-child(1){
+    color:yellowgreen;
+}
+
 
 aside{
     grid-area:aside;
     grid-row-start: 2;
     grid-column-start: 2;
     grid-row-end: 3;
-    
-    background-color:grey;
+    margin:10;
+    background-color:black;
 }
+
+aside>ul{
+    text-transform: capitalize;
+    list-style: none;
+}
+aside>ol{
+    text-transform: capitalize;
+    list-style-type: none;
+}
+ul>li:nth-of-type(odd){
+    color: cyan;
+}
+ul>li:nth-of-type(even){
+    color: magenta;
+}
+ul>li>ol>li:nth-child(1){
+    color:pink;
+}
+ul>li>ol>li:nth-child(2){
+    color:coral;
+}
+                
+ul>li>ol>li:nth-child(3){
+    color:mediumseagreen;
+}
+
+
 
 footer{
     grid-area: footer;
@@ -170,7 +202,7 @@ form{
     border-radius: 10px;
     margin-left:33%;
     margin-right:33%;
-    margin-bottom: 10%;
+    margin-bottom: 7%;
     background-color:yellowgreen;
     align-items: center;
     padding-top: 2%;
